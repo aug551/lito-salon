@@ -1,0 +1,20 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container{
+    width: 80%;
+    padding: 60px 0px;
+    margin-bottom: 50px;
+}
+
+.header-container a{
+    
+    text-decoration: none;
+    color: #624841;
+    margin: 40px;
+}

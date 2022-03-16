@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "id": 0,
+            "name": "Slimwave",
+            "Description": "Technology to get slimmer!"
+        },
+        {
+            "id": 1,
+            "name": "Massage",
+            "Description": "Relax with massage"
+        },
+        {
+            "id": 2,
+            "name": "Hair dye",
+            "Description": "To dye your hair."
+        }
+    ]
+}
