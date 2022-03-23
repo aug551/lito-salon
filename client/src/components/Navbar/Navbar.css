@@ -1,46 +1,63 @@
 h1{
-    margin: 0;
+    margin-left: 40px;
 }
+
+nav{
+    margin-right: 40px;
+}
+
 .nav-container{
-    padding: 5px 25px;
-    height: 90px;
-    color: #d7e9d7;
-    background-color: #232c1b;
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    color: #222f3e;
+    background-color: #222f3e;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
 }
 
 .nav-container a{
-    color: #d7e9d7;
+    color: #c8d6e5;
     text-decoration: none;
 }
 
 .nav-links a{
-    background-color: #232c1b;
     padding: 10px 15px;
+    border-left: #8395a7 1.2px solid;
+}
+
+.nav-links a:hover{
+    animation: linkHover 0.4s forwards;
+}
+
+@keyframes linkHover{
+    to{ 
+    background-color: #576574;
+    border-color: #576574;;
+        
+    }
 }
 
 .dropbtn{
     display: none;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 570px) {
     .nav-links{
         display: none;
+        border-style: none;
     }
 
     .dropbtn{
         display: block;
-        background-color: #232c1b;
+        background-color: #222f3e;
         border: none;
-        color: #d7e9d7;
+        color: #c8d6e5;
         font-size: larger;
-    }
-
-    .dropbtn:active{
-        background-color: #d7e9d7;
     }
 
     .bigNav{
@@ -63,15 +80,13 @@ h1{
     .bigNav .nav-links a{
         width: 60%;
         gap: 50px;
-        border-bottom: 1px solid #d7e9d7;
+        border-bottom: 1px solid #d7e9d77a;
+        border-left: none;
     }
 
     .bigNav .nav-links a:hover{
-        background-color: #d7e9d7;
+        animation: linkHover 0.4s forwards;
     }
 
-    .smallNav{
-        height: 90px;
-    }
 
 }

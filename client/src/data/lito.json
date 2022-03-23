@@ -1,0 +1,19 @@
+{
+    "services" : [
+        {
+            "id" : 0,
+            "name": "Hairstyling",
+            "description": "Hair cutting and styling"
+        },
+        {
+            "id": 1,
+            "name": "Hair coloring",
+            "description": "Aysthetic hair coloring"
+        },
+        {
+            "id": 2,
+            "name": "Waxing",
+            "description": ""
+        }
+    ]
+}

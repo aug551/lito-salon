@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Review from '../../components/Review';
-import Service from '../../components/Service';
+import Service from '../../components/Service/Service';
 import './Home.css'
-const maleServices = require('../../data/male_services.json');
-const femaleServices = require('../../data/female_services.json');
-const otherServices = require('../../data/other_services.json');
+const litoServices = require('../../data/lito.json')
 
 export default class Home extends Component {
   render() {
@@ -15,23 +13,28 @@ export default class Home extends Component {
           <header>
               <h2>Lito Salon, where you can get the best cut in town.</h2>
               <p>Adipisicing occaecat labore amet mollit nisi exercitation Lorem occaecat proident enim eu ipsum. Deserunt enim ad commodo nulla aute aliqua occaecat laboris id. Ullamco dolore nisi eu occaecat aliqua minim dolor cillum sunt. Id officia nisi occaecat voluptate tempor quis anim pariatur nisi incididunt aliqua in. Deserunt. </p>
-              <Link to="/book">Book Now</Link>
-              <Link to="/contact">Contact-Us</Link>
+              <div className='links-container'>
+                <Link to="/book">Book Now</Link>
+                <Link to="/contact">Contact-Us</Link>
+              </div>
           </header>
         </div>
         
-        <article>
+        <article className='services-home'>
             <h2>We offer a variety of services</h2>
-            <Service title="Male Services" services={maleServices.services} />
-            <Service title="Female Services" services={femaleServices.services} />
-            <Service title="Other Services" services={otherServices.services} />
+            <div className='services-home-container'>
+              <Service title="Lito" type="lito-salon" services={litoServices.services} />
+              
+            </div>
             <Link to="/services">Browse our services</Link>
         </article>
         <article>
             <h2>Reviews</h2>
-            <Review name="Aaron Cruz" review="Good" />
-            <Review name="Joseph Mechavez" review="Medium" />
-            <Review name="Ross" review="Excellent" />
+            <div className='reviews-home-container'>
+              <Review name="Aaron Cruz" review="Good" />
+              <Review name="Joseph Mechavez" review="Medium" />
+              <Review name="Ross" review="Excellent" />
+            </div>
         </article>
       </div>
       

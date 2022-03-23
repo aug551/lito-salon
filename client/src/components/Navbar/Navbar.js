@@ -1,4 +1,3 @@
-import { createMemoryHistory } from 'history';
 import React, { Component } from 'react'
 import { Link, Outlet } from 'react-router-dom';
 import './Navbar.css'
@@ -15,9 +14,8 @@ export default class Navbar extends Component {
     this.setState(prevState => ({
       isBigNav: !prevState.isBigNav
     }))
-    document.querySelector('.nav-container').classList.remove('bigNav')
-    document.querySelector('.nav-container').classList.remove('smallNav')
-    let height = (this.state.isBigNav) ? 'bigNav' : 'smallNav';
+
+    let height = (this.state.isBigNav) ? document.querySelector('.nav-container').classList.add('bigNav') : document.querySelector('.nav-container').classList.remove('bigNav');
     document.querySelector('.nav-container').classList.add(height)
   }
   render() {
@@ -28,7 +26,7 @@ export default class Navbar extends Component {
               <nav className='nav-links'>
                 <Link to="/">Home</Link>
                 <Link to="/services">Services</Link>
-                <Link to="/book">Book Now!</Link>
+                <Link to="/book">Book Now</Link>
                 <a href='https://www.facebook.com/ttolitz/'>FB</a>
               </nav>
 
